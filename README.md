@@ -1,9 +1,7 @@
  ![MIT](https://img.shields.io/badge/License-MIT-blue) ![JS](https://img.shields.io/badge/Language-JavaScript-yellow)
 
  ## Table of Contents
-  * [Video](#Video)
   * [Installation](#installation)
-  * [Usage](#usage)
   * [Contribution](#contribution)
   * [Tests](#tests)
   * [License](#license)
@@ -26,7 +24,7 @@
   Update the above with your personal information and you are set to go.
 
   ## Usage
- 
+  To use the application, sign into your MySQL shell using the command `mysql -u root -p`; from that shell run `source db/schema.sql`. E Exit the SQL shell. From here you are good to go, enter `npm start` and the datbase will be live. 
   
   ## Contribution
   Feel free to use, copy, and contribute as you see fit. 
