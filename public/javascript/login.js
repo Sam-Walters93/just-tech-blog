@@ -19,7 +19,7 @@ async function signupFormHandler(event) {
       alert(response.statusText);
     }
   }
-}
+};
 
 async function loginFormHandler(event) {
   event.preventDefault();
@@ -38,12 +38,12 @@ async function loginFormHandler(event) {
     });
 
     if (response.ok) {
-      document.location.replace('/');
+      document.location.replace('/dashboard');
     } else {
       alert(response.statusText);
     }
   }
-}
+};
  
 document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
 document.querySelector('.login-form').addEventListener('submit', loginFormHandler); 
