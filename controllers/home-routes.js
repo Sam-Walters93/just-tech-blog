@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
       'id',
       'post_url',
       'title',
-      'created_at',
+      'created_at'
     ],
     include: [
       {
@@ -27,7 +27,6 @@ router.get('/', (req, res) => {
     ]
   })
     .then(dbPostData => {
-
       const posts = dbPostData.map(post => post.get({ plain: true }));
 
       res.render('homepage', {
@@ -39,15 +38,6 @@ router.get('/', (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
-});
-
-router.get('/login', (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect('/');
-    return;
-  }
-
-  res.render('login');
 });
 
 router.get('/post/:id', (req, res) => {
@@ -93,6 +83,15 @@ router.get('/post/:id', (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
+});
+
+router.get('/login', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+
+  res.render('login');
 });
 
 module.exports = router;
